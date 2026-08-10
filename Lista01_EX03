@@ -1,0 +1,93 @@
+/*
+
+
+    Curso: ENGENHARIA DE COMPUTA��O
+    1� per�odo
+    Nome do aluno(a): Alteir Lincoln Souza Gon�alves da Silva
+
+    Prof. Ernani Cl�udio Borges
+    data: 10/08/2026
+
+==============================================================
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+#include <ctype.h>
+#include <windows.h>
+#include <math.h>
+#include <conio.h>
+
+#define tam1 5
+#define tam2 5
+
+//==============================================================
+//============ LOCAL PARA DECLARAR PROT�TIPOS ==================
+//==============================================================
+
+
+
+
+
+
+//==============================================================
+//============ LOCAL CRIAR OS MODULOS DE FUNCOES ===============
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+//============    CODIGO PRINCIPAL   ===========================
+//==============================================================
+int main()
+{
+    //criar vars
+    int vl_a, vl_b, vl_c;
+    int resp1, resp2, resp3;
+
+    //inicializar vars
+    printf("Digite o primeiro valor: ");
+    fflush(stdin);
+    scanf("%d", &vl_a);
+
+    printf("Digite o segundo valor: ");
+    fflush(stdin);
+    scanf("%d", &vl_b);
+
+
+    printf("Digite o terceiro valor: ");
+    fflush(stdin);
+    scanf("%d", &vl_c);
+
+    //Calculos
+    resp1 = vl_a + vl_b;
+
+    resp2 = vl_a + vl_c;
+
+    resp3 = vl_b + vl_c;
+
+    printf("\nA soma de %d e %d e igual a %d", vl_a, vl_b, resp1);
+    printf("\nA soma de %d e %d e igual a %d", vl_a, vl_c, resp2);
+    printf("\nA soma de %d e %d e iqual a %d", vl_b, vl_c, resp3);
+
+
+
+
+
+
+
+
+    printf("\n\n\n Acabou ... Tchau ... obrigado ... \n\n\n");
+    return 0;
+}
