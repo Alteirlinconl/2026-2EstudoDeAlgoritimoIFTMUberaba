@@ -1,0 +1,92 @@
+/*
+
+
+    Curso: ENGENHARIA DE COMPUTAÇÃO
+    1º período
+    Nome do aluno(a):
+
+    Prof. Ernani Cláudio Borges
+    data: 01/09/2026
+
+==============================================================
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+#include <ctype.h>
+#include <windows.h>
+#include <math.h>
+#include <conio.h>
+
+#define tam1 5
+#define tam2 5
+
+//==============================================================
+//============ LOCAL PARA DECLARAR PROTÓTIPOS ==================
+//==============================================================
+/*Lista01_Ex02.alg - Elabore um algoritmo que leia duas variáveis A e B, troque seus
+valores (conteúdos), ou seja, o conteúdo existente em A deve estar em B e o
+conteúdo estava em B deverá estar em A, sem perder os valores iniciais. Ao final,
+mostre no vídeo o conteúdo das duas variáveis. */
+
+
+
+
+
+//==============================================================
+//============ LOCAL CRIAR OS MODULOS DE FUNCOES ===============
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+//============    CODIGO PRINCIPAL   ===========================
+//==============================================================
+int main()
+{
+    //criar vars
+    char nm_a[50], nm_b[50], nm_aux[50];
+
+    //inicializar vars
+    strcpy(nm_a, "");
+    strcpy(nm_b, "");
+    strcpy(nm_aux, "");
+
+    //Iniciando o programa e recebendo informações
+    printf("Digite a primeira informacao: \n");
+    fflush(stdin);
+    gets(nm_a);
+    printf("Digite a segunda informacao: \n");
+    fflush(stdin);
+    gets(nm_b);
+
+    //Realizando operação de troca
+    strcpy(nm_aux, nm_a);
+    strcpy(nm_a, nm_b);
+    strcpy(nm_b, nm_aux);
+
+    //Mostrando o resultado
+    printf("Variaveis invertidas!");
+    printf("Variavel a %s variavel b %s", nm_a, nm_b);
+
+
+
+
+
+
+
+
+    printf("\n\n\n Acabou ... Tchau ... obrigado ... \n\n\n");
+    return 0;
+}
