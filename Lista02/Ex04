@@ -1,0 +1,102 @@
+/*
+
+
+    Curso: ENGENHARIA DE COMPUTAÇÃO
+    1º período
+    Nome do aluno(a): Alteir Lincoln Souza Gonçalves da Silva
+
+    Prof. Ernani Cláudio Borges
+    data: 05/09/2026
+
+==============================================================
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+#include <ctype.h>
+#include <windows.h>
+#include <math.h>
+#include <conio.h>
+
+#define tam1 5
+#define tam2 5
+
+//==============================================================
+//============ LOCAL PARA DECLARAR PROTÓTIPOS ==================
+//==============================================================
+/*L02_004.alg – Elaborar um algoritmo que receba:
+ O nome do usuário (verificar se não é vazio, caso seja, finalizar);
+ receba um número inteiro e positivo via teclado, verificar se é menor que zero, dar uma
+mensagem e finalizar o programa, caso contrário, processar e mostrar o valor do resto
+(MOD) deste número por 2, 3 e 5*/
+
+
+
+
+
+//==============================================================
+//============ LOCAL CRIAR OS MODULOS DE FUNCOES ===============
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+//============    CODIGO PRINCIPAL   ===========================
+//==============================================================
+int main()
+{
+    //criar vars
+    char nm_nome[100];
+    int vl_n1;
+    int vl_n2;
+
+    //inicializar vars
+    strcpy(nm_nome, "");
+    vl_n1 = 0;
+    vl_n2 = 0;
+
+
+    //iniciando o programa
+    printf("========Iniciando o programa=============\n");
+    printf("Digite o nome do usuario:......");
+    fflush(stdin);
+    gets(nm_nome);
+    if( strcmp(nm_nome, "") == 0 ){
+        printf("\nO nome esta vazio tentativa invalida!");
+    }
+    else{
+        printf("\nDigite um numero, inteiro maior que zero:");
+        fflush(stdin);
+        scanf("%d", &vl_n1);
+        if(vl_n1 <= 0){
+            printf("Valor digitado menor ou igual a zero:");
+        }
+        else{
+            printf("\nO valor do numero %d", vl_n1);
+            vl_n2 = vl_n1 % 2;
+            printf("\n O resto da divisao por 2 e %d", vl_n2);
+            vl_n2 = vl_n1 % 3;
+            printf("\n O resto da divisao por 3 e %d", vl_n2);
+            vl_n2 = vl_n1 % 5;
+            printf("\n O resto da divisao por 5 e %d", vl_n2);
+
+        }
+    }
+
+
+
+
+    printf("\n\n\n Acabou ... Tchau ... obrigado ... \n\n\n");
+    return 0;
+}
