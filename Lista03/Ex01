@@ -1,0 +1,101 @@
+/*
+
+
+    Curso: ENGENHARIA DE COMPUTAÇÃO
+    1º período
+    Nome do aluno(a):Linconl
+
+    Prof. Ernani Cláudio Borges
+    data: 12/09/2026
+
+==============================================================
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+#include <ctype.h>
+#include <windows.h>
+#include <math.h>
+#include <conio.h>
+
+#define tam1 5
+#define tam2 5
+
+//==============================================================
+//============ LOCAL PARA DECLARAR PROTÓTIPOS ==================
+//==============================================================
+/*L03_EX001.alg - Receber dois valores inteiros e positivo (se não for inteiro e
+positivo finalizar o algoritmo), efetuar a soma e armazenar na variável de resultado.
+Verificar o valor do resultado for MAIOR QUE 10, mostrar uma mensagem que é maior que 10 e qual valor foi
+calculado. Senão, verificar se é igual a 10 e mostrar mensagem que a soma é igual a 10,
+Senão, mostrar mensagem que a soma é menor que 10 e seu resultado*/
+
+
+
+
+
+//==============================================================
+//============ LOCAL CRIAR OS MODULOS DE FUNCOES ===============
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+//============    CODIGO PRINCIPAL   ===========================
+//==============================================================
+int main()
+{
+    //criar vars
+    int vl_n1, vl_n2;
+    int result;
+
+    //inicializar vars
+    vl_n1 = vl_n2 = result = 0;
+
+
+    //Iniciando o programa e recebendo informações
+    printf("=======Inicio do programa==========");
+    printf("\nDigite o primeiro valor:");
+    fflush(stdin);
+    scanf("%d", &vl_n1);
+    if(vl_n1 <= 0){
+        printf("\nO numero e menor ou iqual a zero!");
+    }
+    else{
+        printf("\nDigite o segundo valor:");
+        fflush(stdin);
+        scanf("%d", &vl_n2);
+        if(vl_n2 <= 0){
+            printf("\nO segundo valor e igual ou menor que zero");
+        }
+        else{
+            result = vl_n1 + vl_n2;
+
+            if(result < 10){
+                printf("\nO resultado da soma e menor que 10");
+            }else{
+                if(result == 10){
+                    printf("\nO resultado da soma e igual a 10");
+                }else{
+                    if(result > 10){
+                        printf("\nO resultado da soma e maior que 10 ");
+                    }
+                }
+            }
+        }
+    }
+
+    printf("\n\n\n Acabou ... Tchau ... obrigado ... \n\n\n");
+    return 0;
+}
