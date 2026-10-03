@@ -1,0 +1,191 @@
+/*
+
+
+    Curso: ENGENHARIA DE COMPUTAÇÃO
+    1º período
+    Nome do aluno(a): Alteir Lincoln Souza Gonçalves da Silva
+
+    Prof. Ernani Cláudio Borges
+    data: 01/10/2026
+
+==============================================================
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+#include <ctype.h>
+#include <windows.h>
+#include <math.h>
+#include <conio.h>
+
+#define tam1 5
+#define tam2 5
+
+//==============================================================
+//============ LOCAL PARA DECLARAR PROTÓTIPOS ==================
+//==============================================================
+/*LIsta08 - Exercicios Repetição,Monte um MENU com os algoritmos 1, 2 e 3 num só
+processo, ou seja, num só proejto, permitindo ao usuário escolher o tipo
+de cálculo que deseja efetuar, só finalizar quando for digitado a opção
+4 – finalizar algoritmos.
+ */
+
+
+
+
+
+//==============================================================
+//============ LOCAL CRIAR OS MODULOS DE FUNCOES ===============
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+
+//==============================================================
+//============    CODIGO PRINCIPAL   ===========================
+//==============================================================
+int main()
+{
+    //laço principal
+    int opc;
+
+    while(opc != 3){
+        printf("\n\n           MENU DE OPCOES         \n");
+        printf("\n             ==============         \n");
+        printf("\n 1 - Estatistica com varios numeros \n");
+        printf("\n 2 - Calculo fatorial de um numero  \n");
+        printf("\n 3 - Finalizar o programa           \n");
+        printf("\n Escolha o numero de uma das opcoes acima:");
+        do{
+        fflush(stdin);
+        scanf("%d", &opc);
+        if(opc < 1 || opc > 3)
+            printf("\n opcao invalida - escolha novamente: ");
+        }while(opc < 1 || opc > 3);
+        if( opc == 3 )
+            printf("fim");
+        else{
+            if(opc == 1){
+                //criando variaveis
+                int n2, soma,rest, par, impar, maior_vl, menor_vl, maior_vlp, menor_vlp;
+                n2 = soma = rest = par = impar =  maior_vl = menor_vl = maior_vlp = menor_vlp =0;
+                float cont;
+                cont = 0.0;
+                do{
+                    printf("\n Digite um valor positivo (Digite 0 para sair):");
+                    do{
+                        fflush(stdin);
+                        scanf("%d", &n2);
+                        if( n2 < 0 )
+                            printf("Valor digitado invalido por ser menor que 0");
+                    }while(n2 < 0);
+                    if(n2 == 0){
+                        //finalisando o programa
+                    }else{
+                        //operaçoes
+                        soma = soma + n2;
+                        cont = cont + 1;
+                        rest = n2 % 2;
+
+                        //numeros pares e imapres
+                        if( rest == 0 ){
+                            par = par + 1;
+                            if( par == 1 ){
+                                maior_vlp = n2;
+                            }else{
+                                if( maior_vlp < n2 ){
+                                    maior_vlp = n2;
+                                }
+                            }
+                        }else{
+                            impar = impar + 1;
+                            if( impar == 1 ){
+                                menor_vlp = n2;
+                            }else{
+                                if( menor_vlp > n2 ){
+                                    menor_vlp = n2;
+                                }
+                            }
+                        }
+
+                        //maior e menor numero
+                        if( cont == 1 ){
+                            maior_vl = menor_vl = n2;
+                        }else{
+                            if( maior_vl < n2 ){
+                                maior_vl = n2;
+                            }
+                            if( menor_vl > n2 ){
+                                menor_vl = n2;
+                            }
+                        }
+                    }
+                }while(n2 != 0);
+                //operações
+                float media, pc_par, pc_impar;
+                media = pc_par = pc_impar = 0.0;
+                if( cont == 0.0 ){
+                    printf("Nao ouve entrada de valores");
+                }else{
+                    media = (soma / cont);
+
+                    if( par != 0 )
+                        pc_par = (par*100)/cont;
+                    if( impar != 0 )
+                        pc_impar = (impar*100)/cont;
+
+                    //printis de todos os resultados
+
+                    printf("\n A soma de todos os valores e %d", soma);
+                    printf("\n A media de todos os valores e %f", media);
+                    printf("\n A quantidade de numeros informados e %d", cont);
+                    printf("\n A quantidade de numeros pares informados e %d", par);
+                    printf("\n A quantidade de numeros impares informados e %d", impar);
+                    printf("\n A porcentagem de numeros pares e %f", pc_par);
+                    printf("\n A porcentagem de numeros impares e %f", pc_impar);
+                    printf("\n O maior numero e %d e o menor numero e %d", maior_vl, menor_vl);
+                    printf("\n O maior numero par e %d e o menor numero impar e %d", maior_vlp, menor_vlp);
+                }
+            }
+            if(opc == 2){
+                //vai calcular o fatorial de um numero
+
+                //Declarando variaveis da função
+                int n1, resp;
+                n1 = 0;
+                resp = 1;
+                printf("Digite um valor positivo valido: ");
+                do{
+                    fflush(stdin);
+                    scanf("%d", &n1);
+                    if( n1 < 0 )
+                        printf("Valor digitado invalido por ser menor que 0");
+                }while(n1 < 0 );
+                if(n1 ==  0){
+                    printf("O fatorial de 0 e igual a 1");
+                }else{
+                    int i;
+                    for(i = 1; i <= n1; i++){
+                        resp = i*resp;
+                        printf("%d *", i);
+                    }
+                    printf(" = %d", resp);
+                }
+
+            }
+        }
+
+    }
+    printf("\n\n\n Acabou ... Tchau ... obrigado ... \n\n\n");
+    return 0;
+}
